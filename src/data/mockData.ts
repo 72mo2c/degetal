@@ -11,6 +11,8 @@ export interface Product {
   image_url: string;
   stock_count: number;
   is_active: boolean;
+  created_at: string;
+  updated_at: string;
 }
 
 export interface ProductCode {
@@ -41,7 +43,9 @@ export const mockProducts: Product[] = [
     price: 19.99,
     image_url: 'https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=500',
     stock_count: 50,
-    is_active: true
+    is_active: true,
+    created_at: '2024-01-01T00:00:00.000Z',
+    updated_at: '2024-01-01T00:00:00.000Z'
   },
   {
     id: '2',
@@ -53,7 +57,9 @@ export const mockProducts: Product[] = [
     price: 15.99,
     image_url: 'https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?w=500',
     stock_count: 30,
-    is_active: true
+    is_active: true,
+    created_at: '2024-01-01T00:00:00.000Z',
+    updated_at: '2024-01-01T00:00:00.000Z'
   },
   {
     id: '3',
@@ -65,7 +71,9 @@ export const mockProducts: Product[] = [
     price: 50.00,
     image_url: 'https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=500',
     stock_count: 100,
-    is_active: true
+    is_active: true,
+    created_at: '2024-01-01T00:00:00.000Z',
+    updated_at: '2024-01-01T00:00:00.000Z'
   },
   {
     id: '4',
@@ -77,7 +85,9 @@ export const mockProducts: Product[] = [
     price: 20.00,
     image_url: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500',
     stock_count: 80,
-    is_active: true
+    is_active: true,
+    created_at: '2024-01-01T00:00:00.000Z',
+    updated_at: '2024-01-01T00:00:00.000Z'
   },
   {
     id: '5',
@@ -89,7 +99,9 @@ export const mockProducts: Product[] = [
     price: 44.99,
     image_url: 'https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=500',
     stock_count: 40,
-    is_active: true
+    is_active: true,
+    created_at: '2024-01-01T00:00:00.000Z',
+    updated_at: '2024-01-01T00:00:00.000Z'
   },
   {
     id: '6',
@@ -101,7 +113,9 @@ export const mockProducts: Product[] = [
     price: 25.00,
     image_url: 'https://images.unsplash.com/photo-1556589666-10a7bdcbe09e?w=500',
     stock_count: 60,
-    is_active: true
+    is_active: true,
+    created_at: '2024-01-01T00:00:00.000Z',
+    updated_at: '2024-01-01T00:00:00.000Z'
   },
   {
     id: '7',
@@ -113,7 +127,9 @@ export const mockProducts: Product[] = [
     price: 35.00,
     image_url: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500',
     stock_count: 45,
-    is_active: true
+    is_active: true,
+    created_at: '2024-01-01T00:00:00.000Z',
+    updated_at: '2024-01-01T00:00:00.000Z'
   },
   {
     id: '8',
@@ -125,7 +141,9 @@ export const mockProducts: Product[] = [
     price: 119.00,
     image_url: 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=500',
     stock_count: 25,
-    is_active: true
+    is_active: true,
+    created_at: '2024-01-01T00:00:00.000Z',
+    updated_at: '2024-01-01T00:00:00.000Z'
   }
 ];
 
