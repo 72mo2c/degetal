@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import { supabase } from '../lib/supabase'
 import { Product } from '../types'
+import { mockProducts } from '../data/mockData'
 import { ShoppingCart } from 'lucide-react'
 
 export default function ProductsPage() {
@@ -16,19 +16,13 @@ export default function ProductsPage() {
 
   const loadProducts = async () => {
     try {
-      let query = supabase
-        .from('products')
-        .select('*')
-        .eq('is_active', true)
+      let filteredProducts = mockProducts
 
       if (category) {
-        query = query.eq('category', category)
+        filteredProducts = mockProducts.filter(product => product.category === category)
       }
 
-      const { data, error } = await query.order('created_at', { ascending: false })
-
-      if (error) throw error
-      setProducts(data || [])
+      setProducts(filteredProducts)
     } catch (error) {
       console.error('خطأ في تحميل المنتجات:', error)
     } finally {

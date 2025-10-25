@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { supabase } from '../lib/supabase'
 import { Product } from '../types'
+import { mockProducts } from '../data/mockData'
 import { ShoppingCart, Zap, Shield, HeadphonesIcon, CheckCircle } from 'lucide-react'
 
 export default function HomePage() {
@@ -14,15 +14,9 @@ export default function HomePage() {
 
   const loadFeaturedProducts = async () => {
     try {
-      const { data, error } = await supabase
-        .from('products')
-        .select('*')
-        .eq('is_active', true)
-        .order('created_at', { ascending: false })
-        .limit(4)
-
-      if (error) throw error
-      setFeaturedProducts(data || [])
+      // Use mock data instead of Supabase for frontend-only demo
+      const featured = mockProducts.slice(0, 4)
+      setFeaturedProducts(featured)
     } catch (error) {
       console.error('خطأ في تحميل المنتجات:', error)
     } finally {

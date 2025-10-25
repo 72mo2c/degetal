@@ -8,8 +8,18 @@ interface Order {
   created_at: string
   total_amount: number
   status: string
-  items: any[]
-  codes: any[]
+  order_items?: Array<{
+    id: string
+    product_id: string
+    quantity: number
+    price_at_time: number
+    products: {
+      name: string
+      image_url: string
+    }
+  }>
+  items?: any[]
+  codes?: any[]
 }
 
 export default function OrdersPage() {

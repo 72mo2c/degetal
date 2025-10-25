@@ -90,7 +90,7 @@ export default function CheckoutPage() {
 
       const { error: confirmError, paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
         payment_method: {
-          card: cardElement,
+          card: cardElement as any,
           billing_details: {
             name: formData.name,
             email: formData.email,
